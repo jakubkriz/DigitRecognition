@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/home/jakub/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
+        <dex dex="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-56f62e5dcb9a4e710fb852514c07de6413dd292d.jar" />
+    </item>
+    <item
+        jar="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="8694693636ab36910c8100ce527c258ff3ebece0">
+        <dex dex="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/pre-dexed/debug/classes-868a6b13ef405de67d9a9bc81c6468daef8e2db5.jar" />
+    </item>
+    <item
+        jar="/home/jakub/AndroidstudioProjects/DigitRecognition/app/libs/httpclient-android-4.3.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="82edcaec6c7b4599eaeaaf11167ceea41db42f33">
+        <dex dex="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/pre-dexed/debug/httpclient-android-4.3.5-d6052fd244fe0df62b72a78274aba9e9513676a6.jar" />
+    </item>
+    <item
+        jar="/home/jakub/AndroidstudioProjects/DigitRecognition/app/libs/httpmime-4.3.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="1dd0d38df9c6d21e893f2e52403f1cd99e91cd81">
+        <dex dex="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/pre-dexed/debug/httpmime-4.3.5-070f187e3a58e6e7d3c2ee1ed13af1544c8ddd27.jar" />
+    </item>
+    <item
+        jar="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="/home/jakub/AndroidstudioProjects/DigitRecognition/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-44307649e16299bcc13670fda3a24cc0793613d4.jar" />
+    </item>
+
+</items>
