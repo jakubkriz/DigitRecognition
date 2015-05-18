@@ -5,7 +5,7 @@ android {
     buildToolsVersion "21.1.2"
 
     defaultConfig {
-        applicationId "com.example.digitrecognition"
+        applicationId "cz.muni.fi.digitrecognition"
         minSdkVersion 9
         targetSdkVersion 20
     }

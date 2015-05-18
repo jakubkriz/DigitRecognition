@@ -1,6 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Digit Recognition</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico">
+    <meta name="viewport" content="width=device-width">
+</head>
+<body>
+    <header>
+       <h1>Mobile Application on Digit Recognition</h1>
+    </header>
+    <main>
+        <p>Digit Recognition is an Android application which recognizes digits in images and is based on client-server model. The main aim of the client application is to take a picture, send it to the server and display the results. Digit recognition is carried out on the server.</p>
+        
+        
+        <h2 id="js">Hidden options</h2>
+        <h3>Copy or Share</h3>
+        <p>To copy or share the result, hold your finger on the recognized number and choose the desired option.</p>
+        
+        <h2 id="js">Settings</h2>
+        <p>Click the Menu button and choose settings to set a different path to a script or to toggle the light. </p>
+
+        <h2>Integration to external application</h2>
+        <p>To use the application and receive the result in external application, at first define the following intent-filter in the external application: 
+            <p>
+                &lt;intent-filter> <br>
+                &lt;action android:name="digitrecognition.GAUGE_RECOGNITION" /> <br>
+                &lt;category android:name="android.intent.category.DEFAULT"/> <br>
+                &lt;data android:mimeType="text/plain"/> <br>
+                &lt;/intent-filter> <br>
+            </p>
+            <p>
+                Then, use the following code to call the activity of the Digit Recognition application.
+            </p>
+            <p>
+                Intent intent = new Intent("cz.muni.fi.digitrecognition.GAUGE_RECOGNITION");<br>
+                startActivityForResult(intent, 0);<br>
+            </p>
+            <p>
+                To process the result, call the onActivityResult method as follows:
+            </p>
+            <p>
+                protected void onActivityResult(int requestCode, int resultCode, Intent data) {<br>
+                if (requestCode == 0 && resultCode == RESULT_OK && data != null) {<br>
+                int recognizedNumber = data.getIntExtra("GAUGE", 0);<br>
+                }<br>
+                }<br>
+            </p>
+
+        
+        <h2>Detailed description</h2>
+        <h3>Initial screen</h3>
+        <img src="app.png" alt="initial screen" width="100%">
+        
+        <h3>Result</h3>
+        <img src="app_result.png" alt="recognition result" width="100%">
+        
+        <h2>Source code</h2>
+        <p>The source code is available at <a href="https://github.com/jakubkriz/DigitRecognition">https://github.com/jakubkriz/DigitRecognition</a>.</p>
+    </main>  
+</body>
+</html>
+
+
+<!--
 <html>
 <head>
-<title>About OCR Test</title>
+<title>About Digit Recognition</title>
 <link rel="stylesheet" href="style.css" type="text/css"/>
 </head>
 <body>
@@ -26,4 +93,4 @@
 <hr />
 <p style="text-align:center"><a href="market://details?id=com.rmtheis.translator">Translator app</a></p>
 </body>
-</html>
+</html>-->

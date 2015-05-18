@@ -18,7 +18,7 @@
  -->
 <manifest 
     xmlns:android="http://schemas.android.com/apk/res/android"
-	package="com.example.digitrecognition"
+	package="cz.muni.fi.digitrecognition"
     android:installLocation="preferExternal" 
     android:versionName="0.1" 
     android:versionCode="1" >
@@ -49,7 +49,7 @@
 		        <category android:name="android.intent.category.LAUNCHER"/>
       		</intent-filter>
             <intent-filter>
-                <action android:name="com.example.digitrecognition.GAUGE_RECOGNITION" />
+                <action android:name="cz.muni.fi.digitrecognition.GAUGE_RECOGNITION" />
                 <category android:name="android.intent.category.DEFAULT"/>
                 <data android:mimeType="text/plain"/>
             </intent-filter>
