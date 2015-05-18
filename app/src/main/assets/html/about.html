@@ -15,11 +15,11 @@
         <p>Digit Recognition is an Android application which recognizes digits in images and is based on client-server model. The main aim of the client application is to take a picture, send it to the server and display the results. Digit recognition is carried out on the server.</p>
         
         
-        <h2 id="js">Hidden options</h2>
+        <h2>Hidden options</h2>
         <h3>Copy or Share</h3>
         <p>To copy or share the result, hold your finger on the recognized number and choose the desired option.</p>
         
-        <h2 id="js">Settings</h2>
+        <h2>Settings</h2>
         <p>Click the Menu button and choose settings to set a different path to a script or to toggle the light. </p>
 
         <h2>Integration to external application</h2>
@@ -32,11 +32,14 @@
                 &lt;/intent-filter> <br>
             </p>
             <p>
-                Then, use the following code to call the activity of the Digit Recognition application.
+                Then, use the following code in the external application to call the activity of the Digit Recognition application.
             </p>
             <p>
-                Intent intent = new Intent("cz.muni.fi.digitrecognition.GAUGE_RECOGNITION");<br>
-                startActivityForResult(intent, 0);<br>
+                Intent intent = new Intent();<br>
+                intent.setAction("cz.muni.fi.digitrecognition.GAUGE_RECOGNITION");<br>                       intent.setClassName("cz.muni.fi.digitrecognition","cz.muni.fi.digitrecognition.CaptureActivity");<br>
+                if(intent.resolveActivity(getPackageManager()) != null) {<br>
+                    startActivityForResult(intent, 0);<br>
+                }<br>
             </p>
             <p>
                 To process the result, call the onActivityResult method as follows:
@@ -48,6 +51,7 @@
                 }<br>
                 }<br>
             </p>
+            <p>Source code of the demo application is available at <a href="https://github.com/jakubkriz/TestApp">https://github.com/jakubkriz/TestApp</a>.</p>
 
         
         <h2>Detailed description</h2>
@@ -62,35 +66,3 @@
     </main>  
 </body>
 </html>
-
-
-<!--
-<html>
-<head>
-<title>About Digit Recognition</title>
-<link rel="stylesheet" href="style.css" type="text/css"/>
-</head>
-<body>
-<p style="text-align:center"><img src="../images/launcher_icon.png" alt="OCR Test icon"></p>
-<p style="text-align:center">OCR Test<br>Version 0.5.14<br>Application by Robert Theis</p>
-<p style="text-align:center"><a href="http://www.twitter.com/rmtheis">@rmtheis</a><p>
-<p style="text-align:center"><a href="http://www.rmtheis.com">www.rmtheis.com</a><p>
-<hr />
-<p style="text-align:center"><a href="changes.html">Change log</a></p>
-<p style="text-align:center"><a href="mailto:robert.m.theis@gmail.com?subject=Feedback for OCR Test 0.5.14">Send feedback</a></p>
-<p style="text-align:center"><a href="http://www.apache.org/licenses/LICENSE-2.0.txt">License</a></p>
-
-<hr />
-<p>This app is a mash-up of several open source projects: 
-<ul>
-  <li><a href="https://code.google.com/p/tesseract-ocr/">Tesseract OCR</a></li>
-  <li><a href="https://code.google.com/p/tesseract-android-tools/">Tesseract Tools for Android</a></li>
-  <li><a href="https://github.com/zxing/zxing/">ZXing</a></li>
-  <li>a San Francisco State University grad school project</li>
-</ul>
-</p>
-<p>The source code for this app is available at <a href="https://github.com/rmtheis/android-ocr">https://github.com/rmtheis/android-ocr</a>.</p>
-<hr />
-<p style="text-align:center"><a href="market://details?id=com.rmtheis.translator">Translator app</a></p>
-</body>
-</html>-->
